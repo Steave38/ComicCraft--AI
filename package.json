@@ -1,0 +1,28 @@
+{
+  "name": "comiccraft-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Comic Story Creator using Gemini Models",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm:server\" \"npm:client\"",
+    "server": "node server/index.js",
+    "client": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "node --check server/index.js && node --check server/gemini.js"
+  },
+  "dependencies": {
+    "@google/genai": "2.24.0",
+    "cors": "2.8.5",
+    "dotenv": "17.2.2",
+    "express": "5.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "5.0.4",
+    "concurrently": "9.2.1",
+    "vite": "7.1.7",
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
+  }
+}
